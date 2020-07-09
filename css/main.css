@@ -620,11 +620,18 @@ html[dir='rtl'] .banner-cont::before {
   }
 }
 
-.banner-cont:nth-of-type(2n) .banner .banner-name::before {
+html[dir='ltr'] .banner-cont:nth-of-type(2n) .banner .banner-name::before {
   -webkit-transform: translateY(-50%) translateX(100%);
           transform: translateY(-50%) translateX(100%);
   right: -35px;
   left: auto;
+}
+
+html[dir='rtl'] .banner-cont:nth-of-type(2n) .banner .banner-name::before {
+  left: -35px;
+  right: auto;
+  -webkit-transform: translateY(-50%) translateX(-100%);
+          transform: translateY(-50%) translateX(-100%);
 }
 
 .banner {
@@ -781,9 +788,6 @@ html[dir='rtl'] .banner .banner-info {
 
 .banner .banner-name::before {
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-100%);
-          transform: translateY(-50%) translateX(-100%);
-  left: -35px;
   width: 118px;
   height: 2px;
   background-color: #765d58;
@@ -796,6 +800,18 @@ html[dir='rtl'] .banner .banner-info {
   .banner .banner-name::before {
     display: none;
   }
+}
+
+html[dir='ltr'] .banner .banner-name::before {
+  left: -35px;
+  -webkit-transform: translateY(-50%) translateX(-100%);
+          transform: translateY(-50%) translateX(-100%);
+}
+
+html[dir='rtl'] .banner .banner-name::before {
+  right: -35px;
+  -webkit-transform: translateY(-50%) translateX(100%);
+          transform: translateY(-50%) translateX(100%);
 }
 
 @media (max-width: 992px) {
